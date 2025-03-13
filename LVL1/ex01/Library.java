@@ -10,11 +10,15 @@ class Library {
     }
 
     public void addBook(String name) {
-        books.add(name);
+        if(!books.contains(name)) {
+			books.add(name);
+		}
     }
 
     public void addBookToIndex(String name, int index) {
-        books.add(index, name);
+        if(!books.contains(name)) {
+			books.add(index, name);
+		}
     }
 
     public List<String> getAllbooks() {
